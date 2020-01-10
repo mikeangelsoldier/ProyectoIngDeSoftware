@@ -1,0 +1,35 @@
+
+
+.bodybg{
+    -fx-background-image: url("/images/fondo.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.bodybgLogin{
+    -fx-background-image: url("/images/fon.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.bodybgLogin2{
+    -fx-background-image: url("/images/fon.jpg");
+    -fx-background-size: 100% 100%;
+} 
+
+.labelcon{ 
+      -fx-background-image: url("/images/BGlogin.jpg"); 
+}
+  
+.bodybgLoginTest{ 
+    -fx-background-color: darkslategrey;
+    /*-fx-background-color: snow;*/
+    -fx-background-size: 100% 100%;
+    border-style: groove;
+border-bottom: white; 
+}
+
+.Border{
+border-style: groove;
+border-bottom: aqua; 
+}  
+
+

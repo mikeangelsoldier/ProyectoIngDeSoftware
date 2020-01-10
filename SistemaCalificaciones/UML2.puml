@@ -1,0 +1,330 @@
+@startuml
+annotation java.lang.Override
+annotation javafx.fxml.FXML
+class AccesoBD.AdministradorBD
+class AccesoBD.AlumnoBD
+class AccesoBD.ConectaBD_IS
+class AccesoBD.ConexionJavaSQLServer
+class AccesoBD.FechaBD
+class AccesoBD.MateriaBD
+class AccesoBD.SemestreBD
+class Beans.Profesor
+class UntitledClass
+class com.jfoenix.controls.JFXButton
+class com.jfoenix.controls.JFXCheckBox
+class com.jfoenix.controls.JFXComboBox
+class com.jfoenix.controls.JFXDatePicker
+class com.jfoenix.controls.JFXPasswordField
+class com.jfoenix.controls.JFXRadioButton
+class com.jfoenix.controls.JFXTextField
+class controlador.ControladorAdministrador
+class controlador.ControladorAlumno
+class controlador.ControladorCarrera
+class controlador.ControladorGestionGrupos
+class controlador.ControladorGestionParcial
+class controlador.ControladorMateria
+class controlador.ControladorPermisos
+class controlador.ControladorPermisosValidadosYExpirados
+class controlador.ControladorProfesor
+class controlador.ControladorReportes
+class controlador.ControladorSemestre
+class controlador.ControladorUnidadesPorParcial
+class controlador.ControladorValidacionPermisos
+class controlador.controladorFechasParciales
+class java.awt.event.KeyEvent
+class java.io.IOException
+class java.net.URL
+class java.sql.Connection
+class java.sql.DriverManager
+class java.sql.PreparedStatement
+class java.sql.ResultSet
+class java.sql.ResultSetMetaData
+class java.sql.SQLException
+class java.sql.SQLIntegrityConstraintViolationException
+class java.sql.Statement
+class java.time.LocalDate
+class java.time.format.DateTimeFormatter
+class java.util.ArrayList
+class java.util.ResourceBundle
+class java.util.logging.Level
+class java.util.logging.Logger
+class javafx.application.Application
+class javafx.beans.value.ChangeListener
+class javafx.beans.value.ObservableValue
+class javafx.collections.FXCollections
+class javafx.collections.ObservableList
+class javafx.event.ActionEvent
+class javafx.event.Event
+class javafx.event.EventHandler
+class javafx.fxml.FXMLLoader
+class javafx.scene.Parent
+class javafx.scene.Scene
+class javafx.scene.control.Alert
+class javafx.scene.control.ButtonType
+class javafx.scene.control.Control
+class javafx.scene.control.DatePicker
+class javafx.scene.control.Label
+class javafx.scene.control.TableColumn
+class javafx.scene.control.TableView
+class javafx.scene.control.TextArea
+class javafx.scene.control.TextField
+class javafx.scene.control.ToggleGroup
+class javafx.scene.control.cell.PropertyValueFactory
+class javafx.scene.input.MouseEvent
+class javafx.scene.layout.Pane
+class javafx.stage.Stage
+class javafxapplication1.Inicio
+class javax.swing.JOptionPane
+class modelo.Administrador
+class modelo.Alumno
+class modelo.Carrera
+class modelo.Fecha
+class modelo.Materia
+class modelo.Semestre
+interface javafx.fxml.Initializable
+AccesoBD.AdministradorBD ..> java.sql.Connection
+AccesoBD.AdministradorBD ..> java.sql.PreparedStatement
+AccesoBD.AdministradorBD ..> java.sql.ResultSet
+AccesoBD.AdministradorBD ..> java.sql.SQLException
+AccesoBD.AdministradorBD ..> java.util.ArrayList
+AccesoBD.AdministradorBD ..> java.util.logging.Level
+AccesoBD.AdministradorBD ..> java.util.logging.Logger
+AccesoBD.AdministradorBD ..> modelo.Administrador
+AccesoBD.AdministradorBD ..> modelo.Alumno
+AccesoBD.AlumnoBD ..> java.sql.Connection
+AccesoBD.AlumnoBD ..> java.sql.PreparedStatement
+AccesoBD.AlumnoBD ..> java.sql.ResultSet
+AccesoBD.AlumnoBD ..> java.sql.SQLException
+AccesoBD.AlumnoBD ..> java.util.ArrayList
+AccesoBD.AlumnoBD ..> java.util.logging.Level
+AccesoBD.AlumnoBD ..> java.util.logging.Logger
+AccesoBD.AlumnoBD ..> modelo.Alumno
+AccesoBD.ConectaBD_IS ..> java.sql.Connection
+AccesoBD.ConectaBD_IS ..> java.sql.DriverManager
+AccesoBD.ConectaBD_IS ..> java.sql.PreparedStatement
+AccesoBD.ConectaBD_IS ..> java.sql.ResultSet
+AccesoBD.ConectaBD_IS ..> java.sql.SQLException
+AccesoBD.ConexionJavaSQLServer ..> java.sql.Connection
+AccesoBD.ConexionJavaSQLServer ..> java.sql.DriverManager
+AccesoBD.ConexionJavaSQLServer ..> java.sql.PreparedStatement
+AccesoBD.ConexionJavaSQLServer ..> java.sql.ResultSet
+AccesoBD.ConexionJavaSQLServer ..> java.sql.SQLException
+AccesoBD.ConexionJavaSQLServer ..> java.sql.Statement
+AccesoBD.ConexionJavaSQLServer ..> javax.swing.JOptionPane
+AccesoBD.FechaBD ..> java.sql.Connection
+AccesoBD.FechaBD ..> java.sql.PreparedStatement
+AccesoBD.FechaBD ..> java.sql.SQLException
+AccesoBD.MateriaBD ..> java.sql.Connection
+AccesoBD.MateriaBD ..> java.sql.PreparedStatement
+AccesoBD.MateriaBD ..> java.sql.ResultSet
+AccesoBD.MateriaBD ..> java.sql.SQLException
+AccesoBD.MateriaBD ..> java.util.ArrayList
+AccesoBD.MateriaBD ..> java.util.logging.Level
+AccesoBD.MateriaBD ..> java.util.logging.Logger
+AccesoBD.MateriaBD ..> modelo.Materia
+AccesoBD.SemestreBD ..> java.sql.Connection
+AccesoBD.SemestreBD ..> java.sql.PreparedStatement
+AccesoBD.SemestreBD ..> java.sql.ResultSet
+AccesoBD.SemestreBD ..> java.sql.SQLException
+AccesoBD.SemestreBD ..> java.util.ArrayList
+AccesoBD.SemestreBD ..> java.util.logging.Level
+AccesoBD.SemestreBD ..> java.util.logging.Logger
+AccesoBD.SemestreBD ..> modelo.Semestre
+Beans.Profesor ..> AccesoBD.AlumnoBD
+Beans.Profesor ..> AccesoBD.ConexionJavaSQLServer
+Beans.Profesor ..> java.sql.Connection
+Beans.Profesor ..> java.sql.PreparedStatement
+Beans.Profesor ..> java.sql.ResultSet
+Beans.Profesor ..> java.sql.SQLException
+Beans.Profesor ..> java.util.logging.Level
+Beans.Profesor ..> java.util.logging.Logger
+controlador.ControladorAdministrador ..> java.lang.Override
+controlador.ControladorAdministrador ..> javafx.fxml.FXML
+controlador.ControladorAdministrador ..> AccesoBD.AdministradorBD
+controlador.ControladorAdministrador ..> AccesoBD.ConectaBD_IS
+controlador.ControladorAdministrador ..> com.jfoenix.controls.JFXButton
+controlador.ControladorAdministrador ..> com.jfoenix.controls.JFXPasswordField
+controlador.ControladorAdministrador ..> com.jfoenix.controls.JFXTextField
+controlador.ControladorAdministrador ..> java.io.IOException
+controlador.ControladorAdministrador ..> java.net.URL
+controlador.ControladorAdministrador ..> java.sql.SQLException
+controlador.ControladorAdministrador ..> java.sql.SQLIntegrityConstraintViolationException
+controlador.ControladorAdministrador ..> java.util.ArrayList
+controlador.ControladorAdministrador ..> java.util.ResourceBundle
+controlador.ControladorAdministrador ..> javafx.beans.value.ChangeListener
+controlador.ControladorAdministrador ..> javafx.beans.value.ObservableValue
+controlador.ControladorAdministrador ..> javafx.event.ActionEvent
+controlador.ControladorAdministrador ..> javafx.event.Event
+controlador.ControladorAdministrador ..> javafx.scene.control.Alert
+controlador.ControladorAdministrador ..> javafx.scene.control.ButtonType
+controlador.ControladorAdministrador ..> javafx.scene.control.TableColumn
+controlador.ControladorAdministrador ..> javafx.scene.control.TableView
+controlador.ControladorAdministrador ..> javafx.scene.control.TextField
+controlador.ControladorAdministrador ..> javafx.scene.control.cell.PropertyValueFactory
+controlador.ControladorAdministrador ..> modelo.Administrador
+controlador.ControladorAdministrador --|> javafx.fxml.Initializable
+controlador.ControladorAlumno ..> java.lang.Override
+controlador.ControladorAlumno ..> javafx.fxml.FXML
+controlador.ControladorAlumno ..> AccesoBD.AlumnoBD
+controlador.ControladorAlumno ..> AccesoBD.ConectaBD_IS
+controlador.ControladorAlumno ..> com.jfoenix.controls.JFXButton
+controlador.ControladorAlumno ..> com.jfoenix.controls.JFXComboBox
+controlador.ControladorAlumno ..> com.jfoenix.controls.JFXPasswordField
+controlador.ControladorAlumno ..> com.jfoenix.controls.JFXTextField
+controlador.ControladorAlumno ..> java.io.IOException
+controlador.ControladorAlumno ..> java.net.URL
+controlador.ControladorAlumno ..> java.sql.SQLException
+controlador.ControladorAlumno ..> java.sql.SQLIntegrityConstraintViolationException
+controlador.ControladorAlumno ..> java.time.LocalDate
+controlador.ControladorAlumno ..> java.time.format.DateTimeFormatter
+controlador.ControladorAlumno ..> java.util.ArrayList
+controlador.ControladorAlumno ..> java.util.ResourceBundle
+controlador.ControladorAlumno ..> javafx.beans.value.ChangeListener
+controlador.ControladorAlumno ..> javafx.beans.value.ObservableValue
+controlador.ControladorAlumno ..> javafx.collections.FXCollections
+controlador.ControladorAlumno ..> javafx.event.ActionEvent
+controlador.ControladorAlumno ..> javafx.event.Event
+controlador.ControladorAlumno ..> javafx.scene.control.Alert
+controlador.ControladorAlumno ..> javafx.scene.control.ButtonType
+controlador.ControladorAlumno ..> javafx.scene.control.DatePicker
+controlador.ControladorAlumno ..> javafx.scene.control.TableColumn
+controlador.ControladorAlumno ..> javafx.scene.control.TableView
+controlador.ControladorAlumno ..> javafx.scene.control.TextField
+controlador.ControladorAlumno ..> javafx.scene.control.cell.PropertyValueFactory
+controlador.ControladorAlumno ..> modelo.Alumno
+controlador.ControladorAlumno --|> javafx.fxml.Initializable
+controlador.ControladorCarrera ..> java.lang.Override
+controlador.ControladorCarrera ..> java.net.URL
+controlador.ControladorCarrera ..> java.util.ResourceBundle
+controlador.ControladorCarrera --|> javafx.fxml.Initializable
+controlador.ControladorGestionGrupos ..> java.lang.Override
+controlador.ControladorGestionGrupos ..> javafx.fxml.FXML
+controlador.ControladorGestionGrupos ..> com.jfoenix.controls.JFXButton
+controlador.ControladorGestionGrupos ..> java.net.URL
+controlador.ControladorGestionGrupos ..> java.util.ResourceBundle
+controlador.ControladorGestionGrupos ..> javafx.event.ActionEvent
+controlador.ControladorGestionGrupos ..> javafx.scene.layout.Pane
+controlador.ControladorGestionGrupos --|> javafx.fxml.Initializable
+controlador.ControladorGestionParcial ..> java.lang.Override
+controlador.ControladorGestionParcial ..> java.net.URL
+controlador.ControladorGestionParcial ..> java.util.ResourceBundle
+controlador.ControladorGestionParcial --|> javafx.fxml.Initializable
+controlador.ControladorMateria ..> java.lang.Override
+controlador.ControladorMateria ..> javafx.fxml.FXML
+controlador.ControladorMateria ..> AccesoBD.ConectaBD_IS
+controlador.ControladorMateria ..> AccesoBD.MateriaBD
+controlador.ControladorMateria ..> AccesoBD.SemestreBD
+controlador.ControladorMateria ..> com.jfoenix.controls.JFXButton
+controlador.ControladorMateria ..> com.jfoenix.controls.JFXCheckBox
+controlador.ControladorMateria ..> com.jfoenix.controls.JFXComboBox
+controlador.ControladorMateria ..> com.jfoenix.controls.JFXRadioButton
+controlador.ControladorMateria ..> com.jfoenix.controls.JFXTextField
+controlador.ControladorMateria ..> java.io.IOException
+controlador.ControladorMateria ..> java.net.URL
+controlador.ControladorMateria ..> java.sql.SQLException
+controlador.ControladorMateria ..> java.sql.SQLIntegrityConstraintViolationException
+controlador.ControladorMateria ..> java.util.ArrayList
+controlador.ControladorMateria ..> java.util.ResourceBundle
+controlador.ControladorMateria ..> javafx.beans.value.ChangeListener
+controlador.ControladorMateria ..> javafx.beans.value.ObservableValue
+controlador.ControladorMateria ..> javafx.event.ActionEvent
+controlador.ControladorMateria ..> javafx.event.Event
+controlador.ControladorMateria ..> javafx.scene.control.Alert
+controlador.ControladorMateria ..> javafx.scene.control.ButtonType
+controlador.ControladorMateria ..> javafx.scene.control.Control
+controlador.ControladorMateria ..> javafx.scene.control.Label
+controlador.ControladorMateria ..> javafx.scene.control.TableColumn
+controlador.ControladorMateria ..> javafx.scene.control.TableView
+controlador.ControladorMateria ..> javafx.scene.control.TextArea
+controlador.ControladorMateria ..> javafx.scene.control.TextField
+controlador.ControladorMateria ..> javafx.scene.control.ToggleGroup
+controlador.ControladorMateria ..> javafx.scene.control.cell.PropertyValueFactory
+controlador.ControladorMateria ..> modelo.Materia
+controlador.ControladorMateria ..> modelo.Semestre
+controlador.ControladorMateria --|> javafx.fxml.Initializable
+controlador.ControladorPermisos ..> java.lang.Override
+controlador.ControladorPermisos ..> javafx.fxml.FXML
+controlador.ControladorPermisos ..> com.jfoenix.controls.JFXButton
+controlador.ControladorPermisos ..> java.net.URL
+controlador.ControladorPermisos ..> java.util.ResourceBundle
+controlador.ControladorPermisos ..> javafx.scene.control.Label
+controlador.ControladorPermisos --|> javafx.fxml.Initializable
+controlador.ControladorPermisosValidadosYExpirados ..> java.lang.Override
+controlador.ControladorPermisosValidadosYExpirados ..> java.net.URL
+controlador.ControladorPermisosValidadosYExpirados ..> java.util.ResourceBundle
+controlador.ControladorPermisosValidadosYExpirados --|> javafx.fxml.Initializable
+controlador.ControladorProfesor ..> java.lang.Override
+controlador.ControladorProfesor ..> javafx.fxml.FXML
+controlador.ControladorProfesor ..> AccesoBD.ConexionJavaSQLServer
+controlador.ControladorProfesor ..> Beans.Profesor
+controlador.ControladorProfesor ..> com.jfoenix.controls.JFXButton
+controlador.ControladorProfesor ..> com.jfoenix.controls.JFXDatePicker
+controlador.ControladorProfesor ..> com.jfoenix.controls.JFXTextField
+controlador.ControladorProfesor ..> java.awt.event.KeyEvent
+controlador.ControladorProfesor ..> java.net.URL
+controlador.ControladorProfesor ..> java.sql.ResultSet
+controlador.ControladorProfesor ..> java.sql.ResultSetMetaData
+controlador.ControladorProfesor ..> java.time.LocalDate
+controlador.ControladorProfesor ..> java.time.format.DateTimeFormatter
+controlador.ControladorProfesor ..> java.util.ResourceBundle
+controlador.ControladorProfesor ..> javafx.beans.value.ChangeListener
+controlador.ControladorProfesor ..> javafx.beans.value.ObservableValue
+controlador.ControladorProfesor ..> javafx.collections.FXCollections
+controlador.ControladorProfesor ..> javafx.collections.ObservableList
+controlador.ControladorProfesor ..> javafx.event.ActionEvent
+controlador.ControladorProfesor ..> javafx.event.EventHandler
+controlador.ControladorProfesor ..> javafx.scene.control.TableColumn
+controlador.ControladorProfesor ..> javafx.scene.control.TableView
+controlador.ControladorProfesor ..> javafx.scene.control.TextField
+controlador.ControladorProfesor ..> javafx.scene.control.cell.PropertyValueFactory
+controlador.ControladorProfesor ..> javafx.scene.input.MouseEvent
+controlador.ControladorProfesor ..> javax.swing.JOptionPane
+controlador.ControladorProfesor --|> javafx.fxml.Initializable
+controlador.ControladorReportes ..> java.lang.Override
+controlador.ControladorReportes ..> java.net.URL
+controlador.ControladorReportes ..> java.util.ResourceBundle
+controlador.ControladorReportes --|> javafx.fxml.Initializable
+controlador.ControladorSemestre ..> java.lang.Override
+controlador.ControladorSemestre ..> javafx.fxml.FXML
+controlador.ControladorSemestre ..> AccesoBD.ConectaBD_IS
+controlador.ControladorSemestre ..> AccesoBD.SemestreBD
+controlador.ControladorSemestre ..> com.jfoenix.controls.JFXButton
+controlador.ControladorSemestre ..> com.jfoenix.controls.JFXComboBox
+controlador.ControladorSemestre ..> com.jfoenix.controls.JFXTextField
+controlador.ControladorSemestre ..> java.io.IOException
+controlador.ControladorSemestre ..> java.net.URL
+controlador.ControladorSemestre ..> java.sql.SQLException
+controlador.ControladorSemestre ..> java.sql.SQLIntegrityConstraintViolationException
+controlador.ControladorSemestre ..> java.util.ArrayList
+controlador.ControladorSemestre ..> java.util.ResourceBundle
+controlador.ControladorSemestre ..> javafx.beans.value.ChangeListener
+controlador.ControladorSemestre ..> javafx.beans.value.ObservableValue
+controlador.ControladorSemestre ..> javafx.event.ActionEvent
+controlador.ControladorSemestre ..> javafx.event.Event
+controlador.ControladorSemestre ..> javafx.scene.control.Alert
+controlador.ControladorSemestre ..> javafx.scene.control.ButtonType
+controlador.ControladorSemestre ..> javafx.scene.control.TableColumn
+controlador.ControladorSemestre ..> javafx.scene.control.TableView
+controlador.ControladorSemestre ..> javafx.scene.control.TextField
+controlador.ControladorSemestre ..> javafx.scene.control.cell.PropertyValueFactory
+controlador.ControladorSemestre ..> modelo.Semestre
+controlador.ControladorSemestre --|> javafx.fxml.Initializable
+controlador.ControladorUnidadesPorParcial ..> java.lang.Override
+controlador.ControladorUnidadesPorParcial ..> java.net.URL
+controlador.ControladorUnidadesPorParcial ..> java.util.ResourceBundle
+controlador.ControladorUnidadesPorParcial --|> javafx.fxml.Initializable
+controlador.ControladorValidacionPermisos ..> java.lang.Override
+controlador.ControladorValidacionPermisos ..> java.net.URL
+controlador.ControladorValidacionPermisos ..> java.util.ResourceBundle
+controlador.ControladorValidacionPermisos --|> javafx.fxml.Initializable
+controlador.controladorFechasParciales ..> java.lang.Override
+controlador.controladorFechasParciales ..> java.net.URL
+controlador.controladorFechasParciales ..> java.util.ResourceBundle
+controlador.controladorFechasParciales --|> javafx.fxml.Initializable
+javafxapplication1.Inicio ..> java.lang.Override
+javafxapplication1.Inicio --|> javafx.application.Application
+javafxapplication1.Inicio ..> javafx.fxml.FXMLLoader
+javafxapplication1.Inicio ..> javafx.scene.Parent
+javafxapplication1.Inicio ..> javafx.scene.Scene
+javafxapplication1.Inicio ..> javafx.stage.Stage
+@enduml

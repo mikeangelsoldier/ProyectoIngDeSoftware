@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.MenuPrincipalController">
+     <children>
+      <MenuBar layoutX="-5.0" prefHeight="31.0" prefWidth="1205.0">
+        <menus>
+          <Menu fx:id="menuGestionar" mnemonicParsing="false" text="Gestionar">
+            <items>
+              <MenuItem fx:id="itemGrupos" mnemonicParsing="false" onAction="#handleItemGestionarGrupos" text="Grupos" />
+                  <MenuItem fx:id="itemFechasParciales" mnemonicParsing="false"  onAction="#handleItemFechasParciales"    text="Fechas parciales" />
+                  <MenuItem fx:id="itemCaliParcial" mnemonicParsing="false" onAction="#handleItemCaliParcial" text="Calificaciones parciales" />
+                  <MenuItem fx:id="itemUnidadesParcial" mnemonicParsing="false" onAction="#handleItemUnidadesParcial"  text="Unidades por parcial" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuVer" mnemonicParsing="false" text="Ver">
+            <items>
+              <MenuItem fx:id="itemGraficaGrupo" mnemonicParsing="false" onAction="#handleItemGraficaGrupo" text="Gráficas y estadísticas de un grupo" />
+                  <MenuItem fx:id="itemGraficaEstudiante" mnemonicParsing="false" onAction="#handleItemGraficaEstudiante" text="Gráficas y estadísticas de un estudiante" />
+            </items> 
+          </Menu>
+          <Menu fx:id="menuCatalogos" mnemonicParsing="false" text="Catálogos">
+            <items>
+              <MenuItem fx:id="itemGestionar" mnemonicParsing="false" onAction="#handleItemGestionar" text="Gestionar catálogos" />
+            </items> 
+          </Menu> 
+            <Menu fx:id="menuPermisos" mnemonicParsing="false" text="Permisos">
+               <items>
+                  <MenuItem fx:id="itemPermisosValidados" mnemonicParsing="false" onAction="#handleItemPermisosValidados" text="Permisos validados y expirados" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="itemValidarPermiso" mnemonicParsing="false" onAction="#handleItemValidarPermiso" text="Validar permisos" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane fx:id="panelPrincipal" layoutY="32.0" prefHeight="567.0" prefWidth="1200.0" />
+   </children>
+</AnchorPane>

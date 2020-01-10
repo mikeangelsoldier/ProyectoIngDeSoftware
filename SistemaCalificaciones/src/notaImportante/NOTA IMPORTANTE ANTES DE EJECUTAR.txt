@@ -1,0 +1,6 @@
+1. Se debe ejecutar el script de la BD en MySql.
+2. El usuario de MySql deve ser "root" y la contraseña "" (vacío).
+3. Agregar librerías a Netbeans que están en la carpeta  "Ejecutable/lib"
+3. Correr el programa en Netbeans
+
+ 

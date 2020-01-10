@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" styleClass="fondoN2" stylesheets="@../images/styleG.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar layoutX="-5.0" prefHeight="31.0" prefWidth="1205.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Gestionar">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Grupos" />
+                  <MenuItem mnemonicParsing="false" text="Fechas parciales" />
+                  <MenuItem mnemonicParsing="false" text="Calificaciones parciales" />
+                  <MenuItem mnemonicParsing="false" text="Unidades por parcial" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Ver">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Gráficas y estadísticas de un grupo" />
+                  <MenuItem mnemonicParsing="false" text="Gráficas y estadísticas de un estudiante" />
+                  <MenuItem mnemonicParsing="false" text="Calificaciones" />
+            </items> 
+          </Menu>
+          <Menu mnemonicParsing="false" text="Catálogos">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Gestionar catálogos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Permisos">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Permisos validados y expirados" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Validar permisos" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToolbar?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorAlumno">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <right>
+      <JFXToolbar BorderPane.alignment="CENTER" />
+   </right>
+   <left>   </left>
+   <center>
+      <JFXTabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Alumnos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="..\images\style.css">
+                     <children>
+                        <SplitPane dividerPositions="0.38593155893536124" orientation="VERTICAL" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                          <items>
+                              <GridPane maxHeight="-Infinity" minHeight="220.0" prefHeight="220.0" prefWidth="0.0" styleClass="bodybg" stylesheets="@../images/style.css">
+                                <columnConstraints>
+                                  <ColumnConstraints minWidth="0.0" percentWidth="11.0" />
+                                  <ColumnConstraints halignment="LEFT" maxWidth="510.0" minWidth="5.0" percentWidth="30.0" prefWidth="200.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="LEFT" maxWidth="395.0" minWidth="0.0" percentWidth="3.0" prefWidth="192.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="LEFT" maxWidth="106.0" minWidth="95.0" percentWidth="13.0" prefWidth="95.0" />
+                                    <ColumnConstraints halignment="LEFT" maxWidth="395.0" minWidth="347.0" prefWidth="347.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="LEFT" maxWidth="291.0" minWidth="10.0" percentWidth="2.0" prefWidth="82.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="LEFT" maxWidth="118.0" minWidth="122.0" percentWidth="11.0" prefWidth="118.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="LEFT" maxWidth="664.0" minWidth="0.0" prefWidth="0.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="0.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label id="lblID" prefWidth="49.0" text="ID:" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtID" fx:id="txtID" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="211.0" promptText="xxxxxxxx" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <padding>
+                                          <Insets right="280.0" />
+                                       </padding></JFXTextField>
+                                    <Label id="lblCurp" text="CURP:" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtCurp" fx:id="txtCurp" prefWidth="400.0" promptText="xxxxxxxxxxxxxxxxxx" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label id="lblNombre" text="Nombre:" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtNombre" fx:id="txtNombre" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label id="lblApellidoP" accessibleRoleDescription="l" text="Apellido Paterno:" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtApellidoP" fx:id="txtApellidoP" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label id="lblApellidoM" text="Apellido Materno:" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtApellidoM" fx:id="txtApellidoM" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label id="lblApellidoM" text="Usuario:" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXTextField id="txtApellidoM" fx:id="txtUser" editable="false" prefWidth="400.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label id="lblFechaNac" text="Fecha de nacimiento:" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <JFXDatePicker fx:id="dpkFechaNac" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <Label text="Domicilio" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <JFXTextField id="txtFechaNac" fx:id="txtDomicilio" prefWidth="400.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <Label text="Teléfono" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <JFXTextField id="txtFechaNac" fx:id="txtTelefono" prefWidth="400.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <Label text="Correo" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font></Label>
+                                    <JFXTextField id="txtFechaNac" fx:id="txtCorreo" prefWidth="400.0" promptText="example@example.com" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                    <Label id="lblApellidoM" text="Contraseña:" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <VBox prefHeight="138.0" prefWidth="127.0" spacing="15.0" GridPane.columnIndex="6" GridPane.rowIndex="1" GridPane.rowSpan="5">
+                                       <children>
+                                          <JFXButton fx:id="btnAgregar" minHeight="30.0" mnemonicParsing="false" onAction="#handleButtonAgregar" prefHeight="30.0" prefWidth="124.0" style="-fx-background-color: #EEEEEE;" text="Agregar">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnActualizar" minHeight="30.0" mnemonicParsing="false" onAction="#handleButtonActualizar" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #EEEEEE;" text="Actualizar">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnEliminar" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleButtonEliminar" prefHeight="15.0" prefWidth="120.0" style="-fx-background-color: #ee3737;" text="Eliminar">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <JFXButton fx:id="btnFiltrar" minHeight="30.0" mnemonicParsing="false" onAction="#filtrarAlumno" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #51bff8;" text="Filtrar">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label fx:id="lblSexo" minWidth="41.0" prefHeight="21.0" prefWidth="10.0" text="Sexo:">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXTextField fx:id="txtSexo" maxWidth="50.0" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                       <children>
+                                          <Label minWidth="80.0" text="Semestre: ">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXComboBox fx:id="cboSemestreAlumno" />
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                       <children>
+                                          <JFXTextField fx:id="txtPassword" />
+                                          <JFXButton fx:id="btnGenerarPassw" onAction="#generarPassw" text="Generar" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="10.0" top="20.0" />
+                                 </padding>
+                              </GridPane>
+                              <TableView fx:id="tblDatosAlumno" editable="true" onKeyReleased="#handleTableChange" onMouseClicked="#handleTableChange" prefHeight="343.0" prefWidth="1540.0">
+                                <columns>
+                                  <TableColumn fx:id="tbcID" prefWidth="43.0" text="ID" />
+                                  <TableColumn fx:id="tbcCurp" prefWidth="153.0" text="Curp" />
+                                  <TableColumn fx:id="tbcNombre" prefWidth="98.0" text="Nombre" />
+                                  <TableColumn fx:id="tbcApellidoP" prefWidth="131.0" text="Apellido Paterno" />
+                                  <TableColumn fx:id="tbcApellidoM" minWidth="0.0" prefWidth="155.0" text="Apellido Materno" />
+                                  <TableColumn fx:id="tbcSexo" minWidth="0.0" prefWidth="43.0" text="Sexo" />
+                                  <TableColumn fx:id="tbcFechaNac" minWidth="0.0" prefWidth="125.0" text="Fecha de Nacimiento" />
+                                    <TableColumn fx:id="tbcDomicilio" prefWidth="182.0" text="Domicilio" />
+                                    <TableColumn fx:id="tbcTelefono" prefWidth="128.0" text="Teléfono" />
+                                    <TableColumn fx:id="tbcCorreo" prefWidth="146.0" text="Correo" />
+                                    <TableColumn fx:id="tbcSemestreAlumno" prefWidth="75.0" text="Semestre" />
+                                    <TableColumn fx:id="tbcUser" prefWidth="75.0" text="Usuario" />
+                                    <TableColumn fx:id="tbcPassword" prefWidth="75.0" text="Contraseña" />
+                                    <TableColumn fx:id="tbcUsuarioAlta" prefWidth="75.0" text="Usuario Alta" />
+                                    <TableColumn fx:id="tbcFechaAlta" prefWidth="75.0" text="Fecha alta" />
+                                    <TableColumn fx:id="tbcUsuarioMod" prefWidth="75.0" text="Usuario Mod" />
+                                    <TableColumn fx:id="tbcFechaMod" prefWidth="75.0" text="Fecha Mod" />
+                                </columns>
+                                 <effect>
+                                    <Blend />
+                                 </effect>
+                              </TableView>
+                          </items>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Profesores">
+              <fx:include source="VistaProfesor.fxml" />
+            </Tab>
+            <Tab text="Materias">
+              <fx:include source="VistaMateria.fxml" />
+            </Tab>
+            <Tab text="Administradores">
+               <content>
+                  <fx:include source="VistaAdministrador.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Carrera">
+               <content>
+                  <fx:include source="VistaCarrera.fxml" />
+               </content>
+            </Tab>           
+         </tabs>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </JFXTabPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="988" pageHeight="795" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="948" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="acae88ff-2ce8-4969-a0d4-140bbb8831e5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="grupo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="grp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[CALL getAlumnosYCalificacionDeUnGrupo($P{grp});]]>
+	</queryString>
+	<field name="NumControl" class="java.lang.String"/>
+	<field name="nombreCompleto" class="java.lang.String"/>
+	<field name="semestreAlumno" class="java.lang.String"/>
+	<field name="CP1" class="java.lang.Float"/>
+	<field name="faltasP1" class="java.lang.Integer"/>
+	<field name="estadoAprobacion1" class="java.lang.String"/>
+	<field name="CP2" class="java.lang.Float"/>
+	<field name="faltasP2" class="java.lang.Integer"/>
+	<field name="estadoAprobacion2" class="java.lang.String"/>
+	<field name="CP3" class="java.lang.Float"/>
+	<field name="faltasP3" class="java.lang.Integer"/>
+	<field name="estadoAprobacion3" class="java.lang.String"/>
+	<field name="calificacionFinal" class="java.lang.Float"/>
+	<field name="faltasFinal" class="java.lang.Integer"/>
+	<field name="EstadoAprobacionFinal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="346" y="0" width="397" height="25" uuid="01269068-1362-49c1-9556-d3fcc53356f1"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[INSTITUTO TECNOLOGICO DE LEON ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="25" width="392" height="20" uuid="ef7a169d-a538-4e7f-965f-c7aa46bdcb33"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTAMENTO DE SERVICIOS ESCOLARES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="45" width="343" height="20" uuid="e7f89183-2f28-4589-9a6c-c79da3a083b5"/>
+				<text><![CDATA[LISTADO DE EVALUACIONES PARCIALES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="874" y="4" width="74" height="61" uuid="a98507ae-8fb9-43a3-ba27-634bae7d1ea7"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\logo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="134" height="75" uuid="4cc02410-0e0e-4cae-8248-aa6c811e1cf5"/>
+				<imageExpression><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\sep_listo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="475" y="0" width="100" height="15" uuid="b64ac96e-8ba0-47f1-82e3-6b3682e5f051"/>
+				<text><![CDATA[Horario:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="45" width="77" height="15" uuid="5606fa40-97b9-4813-b46b-a574f71e7089"/>
+				<text><![CDATA[Clave grupo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="77" height="15" uuid="dbc2b3a1-50ca-43c9-9823-2d6acac4bfcc"/>
+				<text><![CDATA[Catedratico: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="77" height="15" uuid="59ca656b-50ba-4568-b6c9-dad71e013d2c"/>
+				<text><![CDATA[Carrera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="45" width="50" height="15" uuid="b5ebe149-c95f-4afa-be29-2c397e72949c"/>
+				<text><![CDATA[Grupo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="15" width="77" height="15" uuid="7899e446-0bed-47b2-a529-b33e3b9c7e46"/>
+				<text><![CDATA[Asignatura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="45" width="60" height="15" uuid="d55dfdbc-0f10-42e2-aabe-7d53c8fc88e7"/>
+				<text><![CDATA[Campus:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="103" height="20" uuid="7d4c772b-2433-45f3-9ef8-f486f7f87ef1"/>
+				<text><![CDATA[Numero de control]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="23" width="100" height="20" uuid="bbaf7df2-8d6d-4c98-a22b-0036fa3c1e68"/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="23" width="45" height="20" uuid="1b9d6c40-d562-41ed-94d9-4386aa929bf3"/>
+				<text><![CDATA[Semestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="23" width="24" height="20" uuid="2ab82a51-7a20-47d1-868a-9a0d8244b096"/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="23" width="44" height="20" uuid="56c8445c-f92b-4a53-8283-9c24539dd1ee"/>
+				<text><![CDATA[Faltas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="23" width="36" height="20" uuid="cabcc877-b231-4ff0-98b9-c9da844c0eb3"/>
+				<text><![CDATA[Estado ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="23" width="26" height="20" uuid="1f8865bd-a83f-4b6d-8958-fa7ba0e00e10"/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="23" width="43" height="20" uuid="fce45c3c-b300-463d-9f9c-f6f404ff207e"/>
+				<text><![CDATA[Faltas ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="23" width="24" height="20" uuid="f9de1b61-cdb2-4056-945e-ccf30e278698"/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="23" width="42" height="20" uuid="6d2ecda5-448b-42fc-81ac-b16d13f6db04"/>
+				<text><![CDATA[Faltas ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="649" y="23" width="53" height="20" uuid="86bd08ce-4b15-4caa-a4f2-d8bc1576373e"/>
+				<text><![CDATA[Estado ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="23" width="101" height="20" uuid="e6d924db-a13c-4691-bd1d-432a399a586b"/>
+				<text><![CDATA[Calificacion Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="813" y="23" width="61" height="20" uuid="1148bfcf-7382-4706-b274-99a7c3a64fb4"/>
+				<text><![CDATA[Faltas Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="874" y="23" width="74" height="20" uuid="00b085c5-f0d9-4ba4-8d46-bbe274a83266"/>
+				<text><![CDATA[Estado Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="23" width="47" height="20" uuid="c910632a-89e8-4fd8-a40e-ca316c01d4f6"/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="100" height="20" uuid="e4af5e9c-f9da-4eaa-bc5d-de3077a3d6fd"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="100" height="20" uuid="d45b6a42-6972-4f7a-9588-6caf052456e6"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="0" width="100" height="20" uuid="9f522e98-0444-4ba5-8e25-081897a2d2a1"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 3]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="9588eefe-4a40-4f18-9a03-8a33f85b48b6"/>
+				<textFieldExpression><![CDATA[$F{nombreCompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="22" height="20" uuid="dfc18572-0962-4143-b3c8-6b7d2ee3ede5"/>
+				<textFieldExpression><![CDATA[$F{semestreAlumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="0" width="24" height="20" uuid="cd90bd20-c4a0-42f5-9fa4-1322b5d8f9de"/>
+				<textFieldExpression><![CDATA[$F{CP1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="24" height="20" uuid="95041fb4-29e8-45ef-a6ba-c2d1cbb1ff78"/>
+				<textFieldExpression><![CDATA[$F{faltasP1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="26" height="20" uuid="489bf37b-310a-446a-8b5d-c87a66620281"/>
+				<textFieldExpression><![CDATA[$F{CP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="19" height="20" uuid="ecb6c592-5db4-4166-bc25-edf0e480e94e"/>
+				<textFieldExpression><![CDATA[$F{faltasP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="563" y="0" width="24" height="20" uuid="6530b84d-d134-43eb-aa23-fb1fdf551223"/>
+				<textFieldExpression><![CDATA[$F{CP3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="608" y="0" width="18" height="20" uuid="ea629ce4-71a6-4513-986d-a9209ef6e86a"/>
+				<textFieldExpression><![CDATA[$F{faltasP3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="0" width="58" height="20" uuid="ee7a1c15-2f6b-4d9d-a16e-fd667b9fe6fc"/>
+				<textFieldExpression><![CDATA[$F{calificacionFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="828" y="0" width="36" height="20" uuid="366f19ec-91ab-47ba-8b10-bcadefae1271"/>
+				<textFieldExpression><![CDATA[$F{faltasFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="2" width="59" height="20" uuid="f508600d-f457-4cf3-b6b4-355a9930d635"/>
+				<textFieldExpression><![CDATA[$F{estadoAprobacion1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="2" width="50" height="20" uuid="07b4549f-432f-460f-93ac-bb7fd0e82416"/>
+				<textFieldExpression><![CDATA[$F{estadoAprobacion2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="649" y="2" width="53" height="20" uuid="412a97d9-99bc-4e75-bbac-fbfd5e65f0a1"/>
+				<textFieldExpression><![CDATA[$F{estadoAprobacion3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="874" y="2" width="74" height="20" uuid="dc47d310-0329-4a04-82e5-bf4b6c277b83"/>
+				<textFieldExpression><![CDATA[$F{EstadoAprobacionFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="0" width="47" height="20" uuid="62fdcbe5-7352-445c-8d4a-f0c7ba4c807b"/>
+				<textFieldExpression><![CDATA[$F{NumControl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20" uuid="a7a42380-988a-454f-86d7-39bce5bd150d"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="848" y="34" width="100" height="20" uuid="9f2953f4-68b0-4331-9b4c-2b1db25a0aae"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorAdministrador">
+    <children>
+      <ScrollPane hbarPolicy="NEVER" layoutX="478.0" layoutY="97.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="709.0">
+         <content>
+            <TableView fx:id="tblDatosAdministrador" cache="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleTableChange" onMouseClicked="#handleTableChange" prefHeight="485.0" prefWidth="707.0">
+              <columns>
+                <TableColumn fx:id="tbcNumControl" prefWidth="113.0" text="Numero de control" />
+                  <TableColumn fx:id="tbcNombre" prefWidth="112.0" text="Nombre" />
+                  <TableColumn fx:id="tbcPrimerApellido" prefWidth="118.0" text="Apellido Paterno" />
+                  <TableColumn fx:id="tbcSegundoApellido" prefWidth="112.0" text="Apellido Materno" />
+                  <TableColumn fx:id="tbcSexo" minWidth="0.0" prefWidth="51.0" text="Sexo" />
+                  <TableColumn fx:id="tbcCargo" prefWidth="122.0" text="Cargo" />
+                  <TableColumn fx:id="tbcTelefono" prefWidth="112.0" text="Telefono" />
+                  <TableColumn fx:id="tbcCorreo" prefWidth="72.0" text="Correo" />
+                  <TableColumn fx:id="tbcUser" prefWidth="75.0" text="login" />
+                  <TableColumn fx:id="tbcPassword" prefWidth="75.0" text="password" />
+                  <TableColumn fx:id="tbcUsuarioAlta" prefWidth="75.0" text="Usuario Alta" />
+                  <TableColumn fx:id="tbcFechaAlta" prefWidth="75.0" text="Fecha Alta" />
+                  <TableColumn fx:id="tbcUsuarioMod" prefWidth="75.0" text="Usuario Modificacion" />
+                  <TableColumn fx:id="tbcFechaMod" prefWidth="75.0" text="Fecha Modificacion" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <HBox layoutX="35.0" layoutY="55.0" prefHeight="50.0" prefWidth="487.0" spacing="12.0">
+         <children>
+            <JFXButton fx:id="btnInsertar" buttonType="RAISED" onAction="#handleButtonAgregar" ripplerFill="#179bd3" style="-fx-background-color: #8EBDCC;" text="Insertar">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnActualizar" buttonType="RAISED" onAction="#handleButtonActualizar" ripplerFill="#179bd3" style="-fx-background-color: #8EBDCC;" text="Actualizar">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnEliminar" buttonType="RAISED" onAction="#handleButtonEliminar" ripplerFill="#179bd3" style="-fx-background-color: #8EBDCC;" text="Eliminar">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnFiltrar" buttonType="RAISED" onAction="#filtrarAdministrador" ripplerFill="#179bd3" style="-fx-background-color: #8EBDCC;" text="Filtrar">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <GridPane layoutX="46.0" layoutY="115.0" prefHeight="407.0" prefWidth="419.0" styleClass="bodybg" stylesheets="@../images/style.css">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="10.0" prefWidth="140.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="279.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblNumControlProfesor" text="Número de control:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtNumControl" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="85.0" promptText="XXXXXXXXXX" GridPane.columnIndex="1" />
+            <Label fx:id="lblNombreProfesor" text="Nombre:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblPrimerApellidoProfesor" text="Apellido Paterno:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtPrimerApellido" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="lblSegundoApellidoProfesor" text="Apellido Materno:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSegundoApellido" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblSexoProfesor" text="Sexo:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtSexo" maxWidth="-Infinity" prefWidth="40.0" promptText="H/M" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lblSexoProfesor1" text="Cargo:" GridPane.rowIndex="5">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCargo" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="lblTelefonoProfesor" text="Telefono:" GridPane.rowIndex="6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtTelefono" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="lblCorreoProfesor" text="Correo:" GridPane.rowIndex="7">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCorreo" promptText="ejemplo@ejemplo.com" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="lblFechaNacimientoProfesor" text="Usuario:" GridPane.rowIndex="8">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUser" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="lblFechaNacimientoProfesor1" text="Contraseña:" GridPane.rowIndex="9">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="txtPassword" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+         </children>
+      </GridPane>
+    </children>
+</AnchorPane>

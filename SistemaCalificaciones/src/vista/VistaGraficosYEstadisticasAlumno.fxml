@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" styleClass="fondo2" stylesheets="@../images/styleG.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorGraficosYEstadisticasAlumno">
+   <children>
+      <Pane fx:id="panelTabla" layoutX="133.0" layoutY="45.0" prefHeight="540.0" prefWidth="990.0">
+         <children>
+            <ScrollPane layoutY="44.0" prefHeight="263.0" prefWidth="922.0">
+               <content>
+                  <TableView fx:id="tblTablaGraficaAlumno" prefHeight="261.0" prefWidth="920.0">
+                    <columns>
+                      <TableColumn fx:id="tbcClave" prefWidth="65.0" text="Clave" />
+                      <TableColumn fx:id="tbcNombreMateria" prefWidth="200.0" text="Nombre de la materia" />
+                        <TableColumn fx:id="tbcGrupo" prefWidth="44.0" text="Grupo" />
+                        <TableColumn fx:id="tbcF1" prefWidth="45.0" text="F1" />
+                        <TableColumn fx:id="tbcP1" prefWidth="45.0" text="P1" />
+                        <TableColumn fx:id="tbcF2" prefWidth="45.0" text="F2" />
+                        <TableColumn fx:id="tbcP2" prefWidth="45.0" text="P2" />
+                        <TableColumn fx:id="tbcF3" prefWidth="45.0" text="F3" />
+                        <TableColumn fx:id="tbcP3" prefWidth="45.0" text="P3" />
+                        <TableColumn fx:id="tbcTF" prefWidth="45.0" text="TF" />
+                        <TableColumn fx:id="tbcCF" prefWidth="45.0" text="CF" />
+                        <TableColumn fx:id="tbcNombreMaestro" prefWidth="250.0" text="Nombre del maestro" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <Pane layoutY="307.0" prefHeight="82.0" prefWidth="922.0">
+               <children>
+                  <Label layoutX="27.0" layoutY="24.0" text="Materias Reprobadas:">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMateriasReprobadas" layoutX="270.0" layoutY="24.0" prefHeight="21.0" prefWidth="40.0" text="8">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="584.0" layoutY="28.0" prefHeight="26.0" prefWidth="169.0" text="Materias Aprobadas:">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblMateriasAprobadas" layoutX="761.0" layoutY="28.0" prefHeight="21.0" prefWidth="40.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="25.0" layoutY="392.0" prefHeight="138.0" prefWidth="365.0">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="80.0" text="F# Faltas">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="80.0" text="P# Parcial">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="145.0" text="TF Total de Faltas">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="26.0" prefWidth="153.0" text="CF Calificación Final">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" prefHeight="17.0" prefWidth="83.0" style="-fx-background-color: #eeeeee;" text="Imprimir" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label layoutY="-3.0" text="ORDINARIO">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panelGraficas" layoutX="133.0" layoutY="45.0" prefHeight="540.0" prefWidth="990.0" style="-fx-background-color: #dddddd;" visible="false">
+         <children>
+            <BarChart fx:id="bc" prefHeight="540.0" prefWidth="990.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="93.0" prefHeight="82.0" prefWidth="119.0" spacing="15.0">
+         <children>
+            <JFXButton fx:id="btnTabla" buttonType="RAISED" onAction="#btnVerTabla" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #7777EE;" text="Tabla" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="btnGraficas" buttonType="RAISED" maxWidth="-Infinity" onAction="#btnVerGraficas" prefWidth="80.0" style="-fx-background-color: #7777EE;" text="Gráficas" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label layoutX="119.0" layoutY="11.0" text="Periodo:">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="219.0" layoutY="11.0" text="FEB - JUL 2018">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

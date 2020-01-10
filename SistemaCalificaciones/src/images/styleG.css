@@ -1,0 +1,38 @@
+.fondoB{
+    -fx-background-image: url("/images/fondoB.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.fondoB2{
+    -fx-background-image: url("/images/fondoB2.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.itl{
+    -fx-background-image: url("/images/itl.JPG");
+}
+
+.fondoN{
+    -fx-background-image: url("/images/fondoN.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.fondoN2{
+    -fx-background-image: url("/images/fondoN2.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.fondoN3{
+    -fx-background-image: url("/images/fondoN3.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.fondoN4{
+    -fx-background-image: url("/images/fondoN4.jpg");
+    -fx-background-size: 100% 100%;
+}
+
+.fondo2{
+    -fx-background-image: url("/images/fondo2.jpg");
+    -fx-background-size: 100% 100%;
+}

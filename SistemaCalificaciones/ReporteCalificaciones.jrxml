@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="988" pageHeight="795" orientation="Landscape" whenNoDataType="AllSectionsNoDetail" columnWidth="948" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="grp" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[CALL getAlumnosYCalificacionDeUnGrupo($P{grp});]]>
+	</queryString>
+	<field name="NumControl" class="java.lang.String"/>
+	<field name="nombreCompleto" class="java.lang.String"/>
+	<field name="semestreAlumno" class="java.lang.String"/>
+	<field name="CP1" class="java.lang.Float"/>
+	<field name="faltasP1" class="java.lang.Integer"/>
+	<field name="estadoAprobacion1" class="java.lang.String"/>
+	<field name="CP2" class="java.lang.Float"/>
+	<field name="faltasP2" class="java.lang.Integer"/>
+	<field name="estadoAprobacion2" class="java.lang.String"/>
+	<field name="CP3" class="java.lang.Float"/>
+	<field name="faltasP3" class="java.lang.Integer"/>
+	<field name="estadoAprobacion3" class="java.lang.String"/>
+	<field name="calificacionFinal" class="java.lang.Float"/>
+	<field name="faltasFinal" class="java.lang.Integer"/>
+	<field name="EstadoAprobacionFinal" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="346" y="0" width="397" height="25"/>
+				<textElement>
+					<font size="18" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[INSTITUTO TECNOLOGICO DE LEON ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="385" y="25" width="392" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DEPARTAMENTO DE SERVICIOS ESCOLARES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="45" width="343" height="20"/>
+				<textElement/>
+				<text><![CDATA[LISTADO DE EVALUACIONES PARCIALES]]></text>
+			</staticText>
+			<image>
+				<reportElement x="874" y="4" width="74" height="61"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\logo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="134" height="75"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\sep_listo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="475" y="0" width="100" height="15"/>
+				<textElement/>
+				<text><![CDATA[Horario:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="45" width="77" height="15"/>
+				<textElement/>
+				<text><![CDATA[Clave grupo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="0" width="77" height="15"/>
+				<textElement/>
+				<text><![CDATA[Catedratico: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="77" height="15"/>
+				<textElement/>
+				<text><![CDATA[Carrera:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="134" y="45" width="50" height="15"/>
+				<textElement/>
+				<text><![CDATA[Grupo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="15" width="77" height="15"/>
+				<textElement/>
+				<text><![CDATA[Asignatura:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="45" width="60" height="15"/>
+				<textElement/>
+				<text><![CDATA[Campus:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="23" width="103" height="20"/>
+				<textElement/>
+				<text><![CDATA[Numero de control]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="23" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="23" width="45" height="20"/>
+				<textElement/>
+				<text><![CDATA[Semestre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="261" y="23" width="24" height="20"/>
+				<textElement/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="23" width="44" height="20"/>
+				<textElement/>
+				<text><![CDATA[Faltas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="496" y="23" width="36" height="20"/>
+				<textElement/>
+				<text><![CDATA[Estado ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="23" width="26" height="20"/>
+				<textElement/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="442" y="23" width="43" height="20"/>
+				<textElement/>
+				<text><![CDATA[Faltas ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="563" y="23" width="24" height="20"/>
+				<textElement/>
+				<text><![CDATA[C.P]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="23" width="42" height="20"/>
+				<textElement/>
+				<text><![CDATA[Faltas ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="649" y="23" width="53" height="20"/>
+				<textElement/>
+				<text><![CDATA[Estado ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="23" width="101" height="20"/>
+				<textElement/>
+				<text><![CDATA[Calificacion Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="813" y="23" width="61" height="20"/>
+				<textElement/>
+				<text><![CDATA[Faltas Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="874" y="23" width="74" height="20"/>
+				<textElement/>
+				<text><![CDATA[Estado Final]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="23" width="47" height="20"/>
+				<textElement/>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="575" y="0" width="100" height="20"/>
+				<textElement>
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[PARCIAL 3]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="26" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nombreCompleto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="22" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{semestreAlumno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="261" y="0" width="24" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{CP1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="305" y="0" width="24" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{faltasP1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="406" y="0" width="26" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{CP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="0" width="19" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{faltasP2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="563" y="0" width="24" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{CP3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="608" y="0" width="18" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{faltasP3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="732" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{calificacionFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="828" y="0" width="36" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$F{faltasFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="2" width="59" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{estadoAprobacion1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="496" y="2" width="50" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{estadoAprobacion2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="649" y="2" width="53" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{estadoAprobacion3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="874" y="2" width="74" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{EstadoAprobacionFinal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="25" y="0" width="47" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{NumControl}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="848" y="34" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

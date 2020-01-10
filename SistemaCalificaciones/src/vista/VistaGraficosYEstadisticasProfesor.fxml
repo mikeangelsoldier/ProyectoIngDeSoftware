@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1200.0" styleClass="fondo2" stylesheets="@../images/styleG.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.ControladorGraficosYEstadisticasProfesor">
+   <children>
+      <Pane layoutX="-2.0" layoutY="-1.0" prefHeight="174.0" prefWidth="1203.0">
+         <children>
+            <GridPane layoutX="211.0" layoutY="57.0" prefHeight="88.0" prefWidth="298.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="61.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="235.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Materia">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Grupos" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox prefHeight="25.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" />
+                  <JFXComboBox prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+               </children>
+            </GridPane>
+            <VBox alignment="TOP_CENTER" layoutX="27.0" layoutY="70.0" prefHeight="88.0" prefWidth="143.0" spacing="10.0">
+               <children>
+                  <JFXButton fx:id="btnTabla" buttonType="RAISED" onAction="#btnVerTabla" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: #7777EE;" text="Tablas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="btnGraficas" buttonType="RAISED" maxWidth="-Infinity" onAction="#btnVerGraficas" prefWidth="80.0" style="-fx-background-color: #7777EE;" text="Gráficas" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Label layoutX="43.0" layoutY="14.0" text="Periodo:">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="133.0" layoutY="14.0" text="FEB - JUL 2018">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="panelTabla" layoutX="1.0" layoutY="173.0" prefHeight="425.0" prefWidth="1200.0">
+         <children>
+            <ScrollPane layoutX="24.0" layoutY="14.0" prefHeight="381.0" prefWidth="913.0">
+               <content>
+                  <TableView prefHeight="379.0" prefWidth="910.0">
+                    <columns>
+                      <TableColumn prefWidth="76.0" text="Clave" />
+                      <TableColumn prefWidth="186.0" text="Nombre de la materia" />
+                        <TableColumn prefWidth="44.0" text="Grupo" />
+                        <TableColumn prefWidth="50.0" text="\%AP1" />
+                        <TableColumn prefWidth="50.0" text="\%RP1" />
+                        <TableColumn prefWidth="50.0" text="\%D1" />
+                        <TableColumn prefWidth="50.0" text="\%AP2" />
+                        <TableColumn prefWidth="50.0" text="\%RP2" />
+                        <TableColumn prefWidth="50.0" text="\%D2" />
+                        <TableColumn prefWidth="50.0" text="\%AP3" />
+                        <TableColumn prefWidth="50.0" text="\%RP3" />
+                        <TableColumn prefWidth="50.0" text="\%D3" />
+                        <TableColumn prefWidth="50.0" text="\%FA" />
+                        <TableColumn prefWidth="50.0" text="\%RF" />
+                        <TableColumn prefWidth="50.0" text="\%DF" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+            <VBox layoutX="955.0" layoutY="209.0" prefHeight="171.0" prefWidth="237.0" spacing="4.0">
+               <children>
+                  <Label text="AP# Porcentaje Aprobados Parcial">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="RP# Porcentaje Reprobados Parcial">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="D# Porcentaje Desertores Parcial">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="FA Porcentaje Final Aprobados">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="FR Porcentaje Final Reprobados">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="DR Porcentaje Final Desertados">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton buttonType="RAISED" style="-fx-background-color: #eeeeee;" text="Impimir">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <Pane fx:id="panelGraficas" layoutX="1.0" layoutY="173.0" prefHeight="425.0" prefWidth="1200.0" style="-fx-background-color: #dddddd;" visible="false">
+         <children>
+            <BarChart fx:id="bc" layoutX="-1.0" layoutY="-1.0" prefHeight="425.0" prefWidth="1200.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

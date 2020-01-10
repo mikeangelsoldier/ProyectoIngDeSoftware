@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Parcial" pageWidth="555" pageHeight="1221" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="96"/>
+	<parameter name="Nombre" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="grupo" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[CALL getEncabezadoGestionParcial($P{grupo});]]>
+	</queryString>
+	<field name="nombreCompleto" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="nombreCarrera" class="java.lang.String"/>
+	<field name="ClaveGrupo" class="java.lang.String"/>
+	<field name="Grupo" class="java.lang.String"/>
+	<field name="Campus" class="java.lang.String"/>
+	<field name="aula" class="java.lang.String"/>
+	<field name="horaAsignada" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="137" y="10" width="293" height="25"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[INSTITUTO TECNOLOGICO DE LEON ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="35" width="392" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIVISION DE ESTUDIO PROEFIONALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="165" y="55" width="343" height="20"/>
+				<textElement/>
+				<text><![CDATA[Este reporte estará disponible hasta el cierre de bajas ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="468" y="10" width="74" height="61"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\logo.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="134" height="75"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\sep_listo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch">
+			<subreport>
+				<reportElement x="2" y="0" width="522" height="11"/>
+				<subreportParameter name="grupo">
+					<subreportParameterExpression><![CDATA[$P{grupo}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression class="java.lang.String"><![CDATA[$P{SUBREPORT_DIR} + "Encabezado.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="11" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="699" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="190" height="20"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[1. COBERTURA DEL CURSO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="20" width="156" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[TOTAL DE UNIDADES DEL PROGRAMA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="33" width="236" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[UNIDADES PROGRAMADAS PARA CUBIRSE A LA FECHA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="46" width="205" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[UNIDADES CUBIERTAS A LA FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="61" width="224" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[UNIDADES EVALUADAS,CALIFICADAS Y ENTREGADAS ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="9" y="89" width="232" height="20"/>
+				<textElement/>
+				<text><![CDATA[2.INDICES DE REPORBACION Y DESERCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="122" width="100" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ALUMNOS APROBADOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="109" width="100" height="13"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ALUMNOS INSCRITOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="135" width="129" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[ALUMNOS NO APROBADOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="311" y="0" width="33" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Num.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="344" y="0" width="33" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="135" width="85" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[por reporbación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="395" y="150" width="85" height="15"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[por desercion ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="489" y="117" width="33" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Num.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="522" y="117" width="33" height="20"/>
+				<textElement>
+					<font isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="165" width="232" height="20"/>
+				<textElement/>
+				<text><![CDATA[3. DESAROLLO DEL CURSO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="185" width="153" height="14"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[El CURSO SE DESARROLLA ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="232" y="185" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[REGULAR ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="185" width="100" height="14"/>
+				<textElement/>
+				<text><![CDATA[IRREGULAR ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="34" y="209" width="307" height="15"/>
+				<textElement/>
+				<text><![CDATA[UNIDADES EVALUADAS Y CALIFICACIONES PARCIALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="37" y="319" width="307" height="14"/>
+				<textElement/>
+				<text><![CDATA[PRACTICAS REALIZADAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="440" width="232" height="20"/>
+				<textElement/>
+				<text><![CDATA[4. OBSERVACIONES GENERALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="683" width="100" height="16"/>
+				<textElement/>
+				<text><![CDATA[Firma del catedratico]]></text>
+			</staticText>
+			<line>
+				<reportElement x="201" y="682" width="160" height="1"/>
+			</line>
+			<image>
+				<reportElement x="37" y="224" width="295" height="95"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\TABLA.JPG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="36" y="333" width="295" height="95"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\TABLA.JPG"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="16" y="460" width="508" height="50"/>
+				<imageExpression class="java.lang.String"><![CDATA["C:\\Users\\Jose Cervera\\Desktop\\Ahora si\\SistemaCalificaciones\\SistemaCalificaciones\\src\\images\\comentario.JPG"]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="35" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="16" y="34" width="196" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="489" y="34" width="53" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
